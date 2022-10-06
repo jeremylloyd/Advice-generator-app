@@ -85,12 +85,17 @@ body {
   gap: 1.5rem;
   position: relative;
   max-width: 550px;
+  min-height: 300px;
 }
 
 .panel-advice__advice {
   color: var(--theme-lightcyan);
   font-size: 1.5rem;
   line-height: 1.4em;
+}
+
+.panel-advice__footer {
+  margin-top: auto;
 }
 
 .panel-advice__footer--desktop {
@@ -137,6 +142,7 @@ body {
     margin: 15px 15px 55px;
     padding: 50px 40px 70px;
     gap: 1.75rem;
+    min-height: 350px;
   }
 
   .panel-advice__advice {

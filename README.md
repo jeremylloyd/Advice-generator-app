@@ -43,3 +43,4 @@ Users should be able to:
     If you're not careful, this may result in expensive functions waiting for each other running than running asynchronously.
     To have multiple promises work asynchronously using await, you can use `await Promise.all([promise1, promise2])`.
   - The best video I saw on the topic: [YouTube](https://www.youtube.com/watch?v=iHrVo5fvmzE)
+  - Asynchronous programming is probably the biggest difference to python from JS
