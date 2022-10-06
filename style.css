@@ -1,0 +1,154 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+  min-height: 100vh;
+}
+
+/*  */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --theme-lightcyan: hsl(193, 38%, 86%);
+  --theme-green: hsl(150, 100%, 66%);
+  --theme-greyblue: hsl(217, 19%, 38%);
+  --theme-darkgreyblue: hsl(217, 19%, 24%);
+  --theme-darkblue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--theme-darkblue);
+  font-family: 'Manrope';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 375px;
+}
+
+.panel-advice {
+  background-color: var(--theme-darkgreyblue);
+  display: flex;
+  flex-direction: column;
+  margin: 15px 15px 55px;
+  padding: 40px 25px 60px;
+  border-radius: 10px;
+  text-align: center;
+  gap: 1.5rem;
+  position: relative;
+  max-width: 550px;
+}
+
+.panel-advice__advice {
+  color: var(--theme-lightcyan);
+  font-size: 1.5rem;
+  line-height: 1.4em;
+}
+
+.panel-advice__footer {
+  
+}
+
+.panel-advice__footer--desktop {
+  display: none;
+}
+
+.panel-advice__header {
+  font-size: 0.7rem;
+  color: var(--theme-green);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.panel__refresh {
+  background-color: var(--theme-green);
+  background-image: url(./images/icon-dice.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+  position: absolute;
+  bottom: -32px;
+  left: calc(50% - 32px);
+  transition: box-shadow 0.15s ease-out;
+  cursor: pointer;
+}
+
+.panel__refresh:hover {
+  box-shadow: 0 0 60px var(--theme-green);
+}
+
+@media screen and (min-width: 500px) {
+  .panel-advice__footer--mobile {
+    display: none;
+  }
+
+  .panel-advice__footer--desktop {
+    display: block;
+  }
+
+  .panel-advice {
+    margin: 15px 15px 55px;
+    padding: 50px 40px 70px;
+    gap: 1.75rem;
+  }
+
+  .panel-advice__advice {
+    font-size: 1.65rem;
+    line-height: 1.5em;
+  }
+
+  .panel-advice__header {
+    font-size: 0.8rem;
+  }
+}
