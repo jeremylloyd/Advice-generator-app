@@ -31,4 +31,15 @@ Users should be able to:
 
 ### What I learned
 
-Nothing yet
+- Fetch API and Asynchronous JS functions
+  - `fetch(url).then((res) => res.json()).then((data) => console.log(data))`
+    is the same as:
+    ```
+    response = await fetch("https://api.adviceslip.com/advice");
+    data = await response.json();
+    return data;
+    ```
+  - A common error of newbie JS programmers is to put `await` before every promise.
+    If you're not careful, this may result in expensive functions waiting for each other running than running asynchronously.
+    To have multiple promises work asynchronously using await, you can use `await Promise.all([promise1, promise2])`.
+  - The best video I saw on the topic: [YouTube](https://www.youtube.com/watch?v=iHrVo5fvmzE)
