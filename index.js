@@ -3,7 +3,11 @@ let panelAdvice = document.querySelector(".panel-advice__advice");
 updatePanelAdvice();
 
 async function getAdviceData() {
-  response = await fetch("https://api.adviceslip.com/advice");
+  response = await fetch(
+    "https://api.adviceslip.com/advice", {
+      cache: `no-store`,
+    }
+  );
   data = await response.json();
   return data;
 }
