@@ -129,7 +129,7 @@ body {
   box-shadow: 0 0 60px var(--theme-green);
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   .panel-advice__footer--mobile {
     display: none;
   }
@@ -143,6 +143,7 @@ body {
     padding: 50px 40px 70px;
     gap: 1.75rem;
     min-height: 350px;
+    min-width: 550px;
   }
 
   .panel-advice__advice {
